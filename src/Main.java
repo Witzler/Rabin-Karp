@@ -20,22 +20,18 @@ public class Main {
 
             System.out.println("Test mit Text: " + txt);
             System.out.println("Text Länge: " + txt.length());
-            // Messen der Zeit für die Naive-Suche
             startTime = System.nanoTime();
-            naiveSearch(txt, pat);  // Testdurchlauf der Naive-Methode
+            naiveSearch(txt, pat);
             endTime = System.nanoTime();
             duration = endTime - startTime;
             System.out.println("Naive Suche Zeit: " + duration + " ns");
 
-            // Messen der Zeit für die Rabin-Karp-Suche
+
             startTime = System.nanoTime();
             search(pat, txt, 101);  // Testdurchlauf der Search-Methode
             endTime = System.nanoTime();
             duration = endTime - startTime;
             System.out.println("Rabin-Karp-Suche Zeit: " + duration + " ns");
-
-
-
             System.out.println("-----");
         }
         long startTime, endTime, duration;
@@ -44,7 +40,10 @@ public class Main {
                 "efgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcde" +
                 "fgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdef" +
                 "gabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefg" +
-                "abcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefga" +
+                "abcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefga" +
+                "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc" +
+                "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc"+
+                "bcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefga" +
                 "bcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefga" +
                 "bcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgab" +
                 "cdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabc" +
@@ -77,6 +76,8 @@ public class Main {
                 "cdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgab" +
                 "cdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabc" +
                 "defgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcd" +
+                "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc" +
+                "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab" +
                 "efgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgdefgabcabcdefgabcdefgabcde" +
                 "fgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefg" +
                 "abcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabc" +
@@ -188,8 +189,7 @@ public class Main {
                 "fgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdef" +
                 "gabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgab" +
                 "cdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgdefg";
-        System.out.println("Length: "+pat.length()+ "   " + txt2.length());
-
+        System.out.println("Length Pat: "+pat.length()+ " Length Text: " + txt2.length());
         startTime = System.nanoTime();
         naiveSearch(txt2, pat);  // Testdurchlauf der Naive-Methode
         endTime = System.nanoTime();
@@ -197,6 +197,18 @@ public class Main {
         System.out.println("Naive Suche Zeit: " + duration + " ns");
         startTime = System.nanoTime();
         search(pat, txt2, 101);  // Testdurchlauf der Search-Methode
+        endTime = System.nanoTime();
+        duration = endTime - startTime;
+        System.out.println("Rabin-Karp-Suche Zeit: " + duration + " ns");
+
+        System.out.println("Length Pat: "+pat.length()+ " Length Text: " + txt2.length());
+        startTime = System.nanoTime();
+        naiveSearch(txt2, "abc");  // Testdurchlauf der Naive-Methode
+        endTime = System.nanoTime();
+        duration = endTime - startTime;
+        System.out.println("Naive Suche Zeit: " + duration + " ns");
+        startTime = System.nanoTime();
+        search("abc", txt2, 101);  // Testdurchlauf der Search-Methode
         endTime = System.nanoTime();
         duration = endTime - startTime;
         System.out.println("Rabin-Karp-Suche Zeit: " + duration + " ns");
